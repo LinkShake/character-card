@@ -1,9 +1,10 @@
 "use client";
 
 import { PicsDisplayer } from "./PicsDisplayer";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { ContentBtn } from "./ContentBtn";
 import { RelatedProfiles } from "./RelatedProfiles";
+import dynamic from "next/dynamic";
 // import { dataObj } from "@/data/data";
 
 interface CardProps {
@@ -64,6 +65,15 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   const [isShowMoreEnabled, setIsShowMoreEnabled] = useState(false);
   const [activeTab, setActiveTab] = useState<"life" | "works">("life");
+
+  const Map = useMemo(
+    () =>
+      dynamic(() => import("@/components/Map/Map"), {
+        loading: () => <p>A map is loading</p>,
+        ssr: false,
+      }),
+    []
+  );
 
   const onClick = ({
     name,
@@ -231,7 +241,12 @@ export const Card: React.FC<CardProps> = ({
             </h3>
           </nav>
           {activeTab === "life" ? (
-            <>
+            <div
+              style={{
+                maxHeight: "20rem",
+                overflowY: "auto",
+              }}
+            >
               <p
                 dangerouslySetInnerHTML={{ __html: description }}
                 style={{
@@ -242,6 +257,8 @@ export const Card: React.FC<CardProps> = ({
                 }}
               ></p>
               {/* <br /> */}
+              <Map />
+              <br />
               <div
                 style={{
                   display: "flex",
@@ -251,7 +268,7 @@ export const Card: React.FC<CardProps> = ({
               >
                 <i>{quote}</i>
               </div>
-            </>
+            </div>
           ) : (
             <div
               style={{
