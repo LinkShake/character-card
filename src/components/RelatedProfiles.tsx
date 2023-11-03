@@ -3,17 +3,20 @@ interface RelatedProfilesProps {
     name: string;
     surname: string;
     description: string;
+    quote: string;
     bgColor: string;
   }[];
   onClick?: ({
     name,
     surname,
     description,
+    quote,
     bgColor,
   }: {
     name: string;
     surname: string;
     description: string;
+    quote: string;
     bgColor?: string;
   }) => void;
 }
@@ -33,7 +36,7 @@ export const RelatedProfiles: React.FC<RelatedProfilesProps> = ({
     >
       {[...relatedProfiles]
         .reverse()
-        .map(({ name, surname, description, bgColor }, idx) => {
+        .map(({ name, surname, description, quote, bgColor }, idx) => {
           return (
             <div
               key={idx}
@@ -57,6 +60,7 @@ export const RelatedProfiles: React.FC<RelatedProfilesProps> = ({
                   name,
                   surname,
                   description,
+                  quote,
                   bgColor,
                 });
               }}

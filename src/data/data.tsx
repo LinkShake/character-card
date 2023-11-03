@@ -12,6 +12,7 @@ export const dataObj = {
     "https://www.satisfiction.eu/wp-content/uploads/2021/06/1410338820_Stephen-King-014.jpg",
   ],
   alt: "Stephen King",
+  quote: "I am the literary equivalent of a Big Mac and fries.",
   relatedProfiles: [
     {
       name: "Billy",
@@ -20,6 +21,8 @@ export const dataObj = {
 
     Despite his grim profession, Billy possesses a strong sense of morality and a desire to distance himself from his past. His rough exterior hides a kind and empathetic heart, making him a character of contradictions. When not on assignment, he enjoys reading classic literature, especially Hemingway, and cherishes quiet moments of reflection.`,
       bgColor: "#b91c1c",
+      quote:
+        "You want to know the worst part of dying? It's the fear. Fear that you're going to hell. Fear that you're going to nothing. Fear that the people you've hurt won't forgive you. Fear that the people you love won't remember you.",
     },
     {
       name: "Holly",
@@ -28,6 +31,7 @@ export const dataObj = {
 
 Known for her extraordinary attention to detail and an almost photographic memory, Holly often wears an expression of deep contemplation. Her quirky mannerisms and social awkwardness make her both endearing and mysterious. She carries an air of unpredictability, which sets her apart as an unforgettable character in Stephen King's novels.`,
       bgColor: "#fcd34d",
+      quote: "I'm not good at being normal. I'm good at being me.",
     },
     {
       name: "Stu",
@@ -36,6 +40,8 @@ Known for her extraordinary attention to detail and an almost photographic memor
 
 Stu often dons work-worn clothing that reflects his practicality and resourcefulness. Whether he's on a journey to save what's left of humanity or simply lending a helping hand, Stu's character is marked by his unwavering loyalty and courage in the face of overwhelming odds. His ID would depict a rugged, unyielding survivor ready to take on the challenges of a shattered world.`,
       bgColor: "#0c0a09",
+      quote:
+        "Show me a man or a woman alone and I'll show you a saint. Give me two and they'll fall in love. Give me three and they'll invent the charming thing we call 'society.'",
     },
     {
       name: "It",
@@ -44,6 +50,7 @@ Stu often dons work-worn clothing that reflects his practicality and resourceful
 
 Its chilling, yellow eyes seem to pierce through one's soul, and its crimson, tattered clown suit is a stark contrast to the darkness it represents. An ID for It would capture the unnerving and otherworldly appearance of the malevolent clown, striking terror into anyone who gazes upon it.`,
       bgColor: "#a3a3a3",
+      quote: "We all float down here.",
     },
     {
       name: "Jack",
@@ -52,6 +59,7 @@ Its chilling, yellow eyes seem to pierce through one's soul, and its crimson, ta
 
 Jack's attire often reflects practicality, and his ruggedness is in stark contrast to the ominous forces at play within the Overlook Hotel. As he becomes the winter caretaker of the hotel, Jack's character undergoes a chilling transformation, and his internal demons are unleashed, making him a haunting and unforgettable character in the Stephen King canon.`,
       bgColor: "#1a2e05",
+      quote: "All work and no play makes Jack a dull boy.",
     },
     {
       name: "Danny",
@@ -60,6 +68,7 @@ Jack's attire often reflects practicality, and his ruggedness is in stark contra
 
 Danny's wardrobe typically consists of ordinary child's clothing, a stark contrast to the supernatural events that surround him. His character is marked by his resilience and the bond he shares with the enigmatic chef Dick Hallorann, who also possesses the "shining." Danny's character explores the depths of psychic abilities and the perils they bring, making him a compelling and enduring character in King's works.`,
       bgColor: "#6366f1",
+      quote: "Danny's not here, Mrs. Torrence.",
     },
   ],
 };

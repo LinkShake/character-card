@@ -13,17 +13,20 @@ export default function Home() {
     name: string;
     surname: string;
     description: string;
+    quote: string;
     bgColor?: string;
   }>({
     name: dataObj.name,
     surname: dataObj.surname,
     description: dataObj.description,
+    quote: dataObj.quote,
     bgColor: "",
   });
   const mainProfile = {
     name: dataObj.name,
     surname: dataObj.surname,
     description: dataObj.description,
+    quote: dataObj.quote,
     bgColor: "",
   };
   const cardProps = {

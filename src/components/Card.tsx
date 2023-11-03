@@ -11,6 +11,7 @@ interface CardProps {
   surname: string;
   age?: number;
   description: string;
+  quote: string;
   profilePicturesUrl?: string[];
   bgColor?: string;
   alt?: string;
@@ -18,6 +19,7 @@ interface CardProps {
     name: string;
     surname: string;
     description: string;
+    quote: string;
     bgColor: string;
   }[];
   books?: {
@@ -28,6 +30,7 @@ interface CardProps {
     name: string;
     surname: string;
     description: string;
+    quote: string;
     bgColor?: string;
   };
   variant: "main" | "related";
@@ -37,6 +40,7 @@ interface CardProps {
       name: string;
       surname: string;
       description: string;
+      quote: string;
       bgColor?: string;
     }>
   >;
@@ -45,6 +49,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   age,
   description,
+  quote,
   name,
   surname,
   profilePicturesUrl,
@@ -64,15 +69,17 @@ export const Card: React.FC<CardProps> = ({
     name,
     surname,
     description,
+    quote,
     bgColor,
   }: {
     name: string;
     surname: string;
     description: string;
+    quote: string;
     bgColor?: string;
   }) => {
     setVariant("related");
-    setProfileToDisplay?.({ name, surname, description, bgColor });
+    setProfileToDisplay?.({ name, surname, description, quote, bgColor });
   };
 
   return (
@@ -224,15 +231,27 @@ export const Card: React.FC<CardProps> = ({
             </h3>
           </nav>
           {activeTab === "life" ? (
-            <p
-              dangerouslySetInnerHTML={{ __html: description }}
-              style={{
-                fontFamily: "courier",
-                textAlign: "center",
-                justifyContent: "center",
-                padding: "2px",
-              }}
-            ></p>
+            <>
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                style={{
+                  fontFamily: "courier",
+                  textAlign: "center",
+                  justifyContent: "center",
+                  padding: "2px",
+                }}
+              ></p>
+              {/* <br /> */}
+              <div
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "flex-end",
+                }}
+              >
+                <i>{quote}</i>
+              </div>
+            </>
           ) : (
             <div
               style={{
@@ -278,13 +297,27 @@ export const Card: React.FC<CardProps> = ({
         </div>
       )}
       {variant === "related" && (
-        <p
-          style={{
-            fontFamily: "courier",
-          }}
-        >
-          {description}
-        </p>
+        <>
+          <p
+            style={{
+              fontFamily: "courier",
+            }}
+          >
+            {description}
+          </p>
+
+          {/* <br /> */}
+
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "flex-end",
+            }}
+          >
+            <i>{quote}</i>
+          </div>
+        </>
       )}
       {isShowMoreEnabled && variant === "main" && relatedProfiles && (
         <>
