@@ -274,7 +274,6 @@ export const Card: React.FC<CardProps> = ({
               style={{
                 maxHeight: "19rem",
                 overflowY: "auto",
-                // boxShadow: "inset 0 -10px 20px #f3f4f6",
                 padding: "10px",
                 boxSizing: "border-box",
               }}
